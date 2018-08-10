@@ -55,7 +55,6 @@ alias mv='mv -i'
 if [ -f /etc/bashrc ]; then
           . /etc/bashrc
         fi
-#alias s='.~/.bash_profile'
 #change the pwd configuration to an arrow
 export PS1="\e[0;33m\A \e[0;36m[\h \w]\e[0;31m\$(parse_git_branch)\e[01;37m \$ \e[m"
 export TERM=xterm-256color
@@ -72,6 +71,7 @@ alias ng-sd="sudo nginx -s stop"
 
 #----------My shell shortcut--------------#
 alias rc='vim ~/.bashrc'
+alias s='.~/.bash_profile'
 alias src='source ~/.bash_profile'
 alias vimrc='vim ~/.vimrc'
 
@@ -104,24 +104,32 @@ alias ssh-bwg='ssh -p 28838 root@172.96.242.128 '
 
 alias ssh-aws='ssh -i ~/.ssh/awspubkey.pem ec2-user@34.216.22.237'
 #alias ssh-vv='ssh -i ~/.ssh/vv -p 2683 virtualv@c3s4-2e-syd.hosting-services.net.au'
-alias ssh-no1='ssh root@192.168.221.110'
-alias ssh-no2='ssh root@192.168.221.111'
-alias ssh-no3='ssh root@192.168.221.112'
+alias ssh-no1='ssh root@192.168.221.111'
 
 alias ssh-k1='ssh root@10.210.10.223'
 alias ssh-k2='ssh root@10.210.10.224'
 alias ssh-k3='ssh root@10.210.10.225'
 alias ssh-k4='ssh root@10.210.10.226'
 alias ssh-k5='ssh root@10.210.10.227'
+
+# samswitch
+alias ssh81='ssh root@10.210.10.81'
+alias ssh82='ssh root@10.210.10.82'
+alias ssh131='ssh root@10.210.10.131'
+alias ssh132='ssh root@10.210.10.132'
+alias ssh172='ssh admin@10.210.10.172'
+alias ssh173='ssh admin@10.210.10.173'
+
 # alias for git
 alias git-conf='vim ~/.gitconfig'
-alias gs="git status"
-alias gc="git checkout"
-alias gcb="git checkout -branch"
-alias gmf="git merge --no-ff"
-alias gcm='git commit -m'
-alias ga="git add --all"
-alias gp="git push"
+alias gs="git status" #查看状态
+alias gc="git checkout"  #签出
+alias gcb="git checkout -branch"  #拆分分支
+alias gmf="git merge --no-ff"  #合并分支
+alias gcm='git commit -m'  #添加到仓库
+alias ga="git add --all"  #添加到工作区
+alias gra="remote add origin" #后面添加仓库地址
+alias gp="git push -u origin master" #上传到远程仓库
 
 #--------------My shell scripts---------------#
 
