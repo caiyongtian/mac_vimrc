@@ -56,13 +56,18 @@ if [ -f /etc/bashrc ]; then
           . /etc/bashrc
         fi
 #change the pwd configuration to an arrow
-export PS1="\e[0;33m\A \e[0;36m[\h \w]\e[0;31m\$(parse_git_branch)\e[01;37m \$ \e[m"
+export PS1="\e[0;33m\A \e[0;36m[\W]\e[0;31m\$(parse_git_branch)\e[01;37m \$ \e[m"
 export TERM=xterm-256color
 
 alias vi="vim"
 alias py="python"
+alias ip="ifconfig"
 
 #k8s setting
+#source $(brew --prefix)/etc/bash_completion
+#source <(kubectl completion bash)
+#source <(helm completion bash)
+brew unlink bash-completion && brew link bash-completion
 alias helms='helm --tls --tiller-namespace kube-system'
 alias kls='kubectl get po --all-namespaces -o wide'
 alias k='kubectl'
@@ -77,7 +82,7 @@ alias ng-sd="sudo nginx -s stop"
 
 #----------My shell shortcut--------------#
 alias rc='vim ~/.bashrc'
-alias s='.~/.bash_profile'
+alias s='vim ~/.bash_profile'
 alias src='source ~/.bash_profile'
 alias vimrc='vim ~/.vimrc'
 
@@ -128,6 +133,7 @@ alias ssh173='ssh admin@10.210.10.173'
 
 # alias for git
 alias git-conf='vim ~/.gitconfig'
+alias git-set='git config --global user.name "caiyongtian" && git config --global user.mail "709731685@qq.com"'
 alias gs="git status" #查看状态
 alias gc="git checkout"  #签出
 alias gcb="git checkout -branch"  #拆分分支
