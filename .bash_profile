@@ -62,6 +62,12 @@ export TERM=xterm-256color
 alias vi="vim"
 alias py="python"
 
+#k8s setting
+alias helms='helm --tls --tiller-namespace kube-system'
+alias kls='kubectl get po --all-namespaces -o wide'
+alias k='kubectl'
+alias ks='kubectl get po'
+
 alias d:ps="docker ps"
 
 #Nginx server
