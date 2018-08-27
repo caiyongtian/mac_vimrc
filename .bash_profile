@@ -56,8 +56,7 @@ if [ -f /etc/bashrc ]; then
           . /etc/bashrc
         fi
 #change the pwd configuration to an arrow
-#export PS1="\e[0;33m\A \e[0;36m[\W]\e[0;31m\$(parse_git_branch)\e[01;37m \$ \e[m"
-export PS1="\[\e[0;33m\]\A \[\e[0;36m\][\W]\[\e[0;31m\]\$(parse_git_branch)\[\e[01;37m\] \$ \[\e[m\]"
+export PS1='\[\e[0;33m\]\A \[\e[0;36m\][\W]\[\e[0;31m\]'$(parse_git_branch)'\[\e[01;37m\] \$ \[\e[m\]'
 export TERM=xterm-256color
 
 alias vi="vim"
