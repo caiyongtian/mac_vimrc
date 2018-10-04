@@ -58,6 +58,8 @@ Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 
+"vim-commentary gcc for #
+autocmd FileType blade set commentstring=#\ <!--%s--!>
 " 针对不同的文件类型采用不同的缩进格式
 filetype plugin indent on
 
