@@ -22,7 +22,7 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-
+Plugin 'tpope/vim-commentary'
 Plugin 'kabbamine/vcoolor.vim'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'guns/vim-sexp'
